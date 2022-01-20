@@ -1,0 +1,78 @@
+{
+   "edgeClusterName":"ec01",
+   "edgeClusterType":"NSX-T",
+   "edgeRootPassword":"fakepassword",
+   "edgeAdminPassword":"fakepassword",
+   "edgeAuditPassword":"fakepassword",
+   "edgeFormFactor":"LARGE",
+   "tier0ServicesHighAvailability":"ACTIVE_ACTIVE",
+   "mtu":9000,
+   "asn":64518,
+   "tier0RoutingType":"EBGP",
+   "tier0Name": "ec01-t0-gw01",
+   "tier1Name": "ec01-t1-gw01",
+   "edgeClusterProfileType": "CUSTOM",
+   "edgeClusterProfileSpec":
+    {  "bfdAllowedHop": 255,
+       "bfdDeclareDeadMultiple": 3,
+       "bfdProbeInterval": 1000,
+       "edgeClusterProfileName": "ecp01",
+       "standbyRelocationThreshold": 30
+    },
+   "edgeNodeSpecs":[
+      {
+         "edgeNodeName":"nsx01-edge1.vcf.vsanpe.vmware.com",
+         "clusterId":"b1dc902f-26dd-4da4-b714-5bf907845bc0",
+         "managementIP":"10.156.133.56/20",
+         "managementGateway":"10.156.143.253",
+         "edgeTepGateway":"172.26.0.1",
+         "edgeTep1IP":"172.26.1.80/20",
+         "edgeTep2IP":"172.26.1.81/20",
+         "edgeTepVlan":"3926",
+         "interRackCluster": "false",
+         "uplinkNetwork":[
+            {
+               "uplinkVlan":3924,
+               "uplinkInterfaceIP":"172.24.1.80/20",
+               "peerIP":"172.24.0.62/20",
+               "asnPeer":64512,
+               "bgpPeerPassword":"fakepassword"
+            },
+            {
+               "uplinkVlan":3925,
+               "uplinkInterfaceIP":"172.25.1.80/20",
+               "peerIP":"172.25.0.63/20",
+               "asnPeer":64512,
+               "bgpPeerPassword":"fakepassword"
+            }
+         ]
+      },
+      {
+         "edgeNodeName":"nsx01-edge2.vcf.vsanpe.vmware.com",
+         "clusterId":"b1dc902f-26dd-4da4-b714-5bf907845bc0",
+         "managementIP":"10.156.133.57/20",
+         "managementGateway":"10.156.143.253",
+         "edgeTepGateway":"172.26.0.1",
+         "edgeTep1IP":"172.26.1.82/20",
+         "edgeTep2IP":"172.26.1.83/20",
+         "edgeTepVlan":"3926",
+         "interRackCluster": "false",
+         "uplinkNetwork":[
+            {
+               "uplinkVlan":3924,
+               "uplinkInterfaceIP":"172.24.1.81/20",
+               "peerIP":"172.24.0.62/20",
+               "asnPeer":64512,
+               "bgpPeerPassword":"fakepassword"
+            },
+            {
+               "uplinkVlan":3925,
+               "uplinkInterfaceIP":"172.25.1.81/20",
+               "peerIP":"172.25.0.63/20",
+               "asnPeer":64512,
+               "bgpPeerPassword":"fakepassword"
+            }
+         ]
+      }
+   ]
+}
