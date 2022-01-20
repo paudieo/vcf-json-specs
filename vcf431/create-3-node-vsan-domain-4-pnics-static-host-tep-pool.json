@@ -1,0 +1,211 @@
+{
+  "domainName": "wld01",
+  "orgName": "VMware",
+  "vcenterSpec": {
+    "datacenterName": "wld01-dc1",
+    "name": "vcsa02",
+    "networkDetailsSpec": {
+      "dnsName": "vcsa02.vcf.vsanpe.vmware.com",
+      "gateway": "10.156.143.253",
+      "ipAddress": "10.156.133.46",
+      "subnetMask": "255.255.240.0"
+    },
+    "rootPassword": "my-password"
+  },
+  "computeSpec": {
+    "clusterSpecs": [
+      {
+        "name": "wld01-cl01",
+        "advancedOptions": {
+          "highAvailability": {
+            "enabled": true
+          }
+        },
+        "datastoreSpec": {
+            "vsanDatastoreSpec": {
+                "failuresToTolerate": 1,
+                "licenseKey": "your-vSAN-license-key",
+                "datastoreName": "wld01-vsan-01"
+           }
+       },
+        "hostSpecs": [
+          {
+            "hostNetworkSpec": {
+              "vmNics": [
+                {
+                  "id": "vmnic0",
+                  "vdsName": "wld01-vds01"
+                },
+                {
+                  "id": "vmnic1",
+                  "vdsName": "wld01-vds01"
+                },
+                {
+                  "id": "vmnic2",
+                  "vdsName": "wld01-vds02"
+                },
+                {
+                  "id": "vmnic3",
+                  "vdsName": "wld01-vds02"
+                }
+              ]
+            },
+            "id": "id-of-comissoned-host-in-sddc",
+            "licenseKey": "your-ESXi-license-key"
+          },
+          {
+            "hostNetworkSpec": {
+              "vmNics": [
+                {
+                  "id": "vmnic0",
+                  "vdsName": "wld01-vds01"
+                },
+                {
+                  "id": "vmnic1",
+                  "vdsName": "wld01-vds01"
+                },
+                {
+                  "id": "vmnic2",
+                  "vdsName": "wld01-vds02"
+                },
+                {
+                  "id": "vmnic3",
+                  "vdsName": "wld01-vds02"
+                }
+              ]
+            },
+            "id": "id-of-comissoned-host-in-sddc",
+            "licenseKey": "your-ESXi-license-key"
+          },
+          {
+            "hostNetworkSpec": {
+              "vmNics": [
+                {
+                  "id": "vmnic0",
+                  "vdsName": "wld01-vds01"
+                },
+                {
+                  "id": "vmnic1",
+                  "vdsName": "wld01-vds01"
+                },
+                {
+                  "id": "vmnic2",
+                  "vdsName": "wld01-vds02"
+                },
+                {
+                  "id": "vmnic3",
+                  "vdsName": "wld01-vds02"
+                }
+              ]
+            },
+            "id": "id-of-comissoned-host-in-sddc",
+            "licenseKey": "your-ESXi-license-key"
+          }
+        ],
+        "networkSpec": {
+          "nsxClusterSpec": {
+            "nsxTClusterSpec": {
+              "geneveVlanId": 3923,
+              "ipAddressPoolSpec": {
+                "name": "host-tep-pool-01",
+                "subnets": [
+                  {
+                    "cidr": "172.23.0.0/20",
+                    "gateway": "172.23.0.1",
+                    "ipAddressPoolRanges": [
+                      {
+                        "end": "172.23.0.50",
+                        "start": "172.23.0.40"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "vdsSpecs": [
+            {
+              "isUsedByNsxt": false,
+              "name": "wld01-vds01",
+              "niocBandwidthAllocationSpecs": [
+                {
+                  "niocTrafficResourceAllocation": {
+                    "limit": 0,
+                    "reservation": 0,
+                    "sharesInfo": {
+                      "shares": 0
+                    }
+                  }
+                }
+              ],
+              "portGroupSpecs": [ {
+                  "name": "wld01-vds01-pg-mgmt",
+                  "transportType": "MANAGEMENT"
+                },
+                {
+                  "name": "wld01-vds01-vSAN-pg",
+                  "transportType": "VSAN"
+                },
+                {
+                  "name": "wld01-vds01-vmotion-pg",
+                  "transportType": "VMOTION"
+                }
+              ]
+            },
+            {
+              "isUsedByNsxt": true,
+              "name": "wld01-vds02",
+              "niocBandwidthAllocationSpecs": [
+                {
+                  "niocTrafficResourceAllocation": {
+                    "limit": 0,
+                    "reservation": 0,
+                    "sharesInfo": {
+                      "shares": 0
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "nsxTSpec": {
+    "nsxManagerSpecs": [
+    {
+      "name": "nsx02a",
+      "networkDetailsSpec": {
+          "ipAddress": "10.156.133.48",
+          "dnsName": "nsx02a.vcf.vsanpe.vmware.com",
+          "gateway": "10.156.143.253",
+          "subnetMask": "255.255.240.0"
+    }
+   },
+   {
+        "name": "nsx02b",
+        "networkDetailsSpec": {
+            "ipAddress": "10.156.133.49",
+            "dnsName": "nsx02b.vcf.vsanpe.vmware.com",
+            "gateway": "10.156.143.253",
+            "subnetMask": "255.255.240.0"
+     }
+    },
+    {
+      "name": "nsx02c",
+      "networkDetailsSpec": {
+          "ipAddress": "10.156.133.50",
+          "dnsName": "nsx02c.vcf.vsanpe.vmware.com",
+          "gateway": "10.156.143.253",
+          "subnetMask": "255.255.240.0"
+        }
+    }
+],
+    "vip": "10.156.133.47",
+    "vipFqdn": "nsx02.vcf.vsanpe.vmware.com",
+    "licenseKey": "your-NSX-T-license-key",
+    "nsxManagerAdminPassword": "my-password",
+    "formFactor" : "medium"
+    }
+  }
