@@ -1,0 +1,28 @@
+{
+    "clusterExpansionSpec": {
+        "hostSpecs": [ {
+            "hostNetworkSpec": {
+              "vmNics": [
+                {
+                  "id": "vmnic0",
+                  "vdsName": "wld01-vds01"
+                },
+                {
+                  "id": "vmnic1",
+                  "vdsName": "wld01-vds01"
+                },
+                {
+                  "id": "vmnic2",
+                  "vdsName": "wld01-vds02"
+                },
+                {
+                  "id": "vmnic3",
+                  "vdsName": "wld01-vds02"
+                }
+              ]
+            },
+            "id": "bd98d334-c1e9-4421-9155-17ff3075b558",
+            "licenseKey": "AAAAA-BBBBB-CCCCC-DDDDD-EEEEE",
+        } ],
+    },
+}
