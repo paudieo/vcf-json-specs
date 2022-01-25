@@ -1,0 +1,40 @@
+{
+    "edgeClusterExpansionSpec": {
+        "additionalTier1Names": [ "" ],
+        "edgeNodeAdminPassword": "fakeapassword",
+        "edgeNodeAuditPassword": "fakeapassword",
+        "edgeNodeRootPassword": "fakeapassword",
+        "edgeNodeSpecs": [ {
+            "clusterId": "b1dc902f-26dd-4da4-b714-5bf907845bc0",
+            "edgeNodeName": "nsx01-edge3.vcf.vsanpe.vmware.com",
+            "edgeTep1IP": "172.26.1.84/20",
+            "edgeTep2IP": "172.26.1.85/20",
+            "edgeTepGateway": "172.26.0.1",
+            "edgeTepVlan": 3926,
+            "firstNsxVdsUplink": "uplink1",
+            "interRackCluster": false,
+            "managementGateway": "10.156.143.253",
+            "managementIP": "10.156.133.58/20",
+            "secondNsxVdsUplink": "uplink2",
+            "uplinkNetwork": [ {
+                "bgpPeers": [ {
+                    "asn": 64512,
+                    "ip": "172.24.0.62/20",
+                    "password": "fakeapassword"
+                } ],
+                "uplinkInterfaceIP": "172.24.1.82/20",
+                "uplinkVlan": 3924
+            },{
+                "bgpPeers": [ {
+                    "asn": 64512,
+                    "ip": "172.25.0.63/20",
+                    "password": "fakeapassword"
+                } ],
+                "uplinkInterfaceIP": "172.25.1.82/20",
+                "uplinkVlan": 3925
+            } ]
+        } ]
+    
+    },
+    "operation": "EXPANSION"
+}
