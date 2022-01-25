@@ -1,0 +1,6 @@
+{
+    "edgeClusterShrinkageSpec": {
+        "edgeNodeIds": [ "9acfecf8-2644-49b5-9c69-070032a4a3ba" ]
+    },
+    "operation": "SHRINKAGE"
+}
