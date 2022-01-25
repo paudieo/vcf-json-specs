@@ -1,6 +1,5 @@
 {
     "edgeClusterExpansionSpec": {
-        "additionalTier1Names": [ "" ],
         "edgeNodeAdminPassword": "fakeapassword",
         "edgeNodeAuditPassword": "fakeapassword",
         "edgeNodeRootPassword": "fakeapassword",
