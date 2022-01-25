@@ -1,0 +1,25 @@
+{
+    "edgeClusterId": "b4a66b04-aba4-4be8-af28-2530675a4d8b",
+    "avns": [
+        {
+            "name": "X-REGION",
+            "regionType": "X_REGION",
+            "gateway": "10.156.184.1",
+            "subnet": "10.156.184.0",
+            "subnetMask": "255.255.255.224",
+            "mtu": 9000,
+			"routerName": "ec01-t1-gw01",
+            "portGroupName": "X-REGION"
+        },
+        {
+            "name": "REGION-A",
+            "regionType": "REGION_A",
+            "subnet": "10.159.231.112",
+            "gateway": "10.159.231.113",
+            "subnetMask": "255.255.255.240",
+            "mtu": 9000,
+			"routerName": "ec01-t1-gw01",
+            "portGroupName": "region-a"
+        }    
+    ]
+}
